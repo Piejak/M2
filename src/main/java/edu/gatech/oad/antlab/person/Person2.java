@@ -31,15 +31,14 @@ public class Person2 {
 	 */
 	private String calc(String input) {
 	  //Person 2 put your implementation here
-		Random r = new Random();
-		Char[] c = input.toCharArray();
-		for (int i = 0; i < array.length(); i++) {
-		    int pos = r.nextInt(c.length);
-		    int temp = c[i];
-		    c[i] = c[pos];
-		    c[pos] = temp;
-		}
-		return String(c);
+		char[] c = input.toCharArray();
+		char temp = c[1];
+		c[1] = c[4];
+		c[4] = c[1];
+		temp = c[0];
+		c[0] = c[3];
+		c[3] = c[0];
+		return new String(c);
 	}
 	/**
 	 * Return a string rep of this object
