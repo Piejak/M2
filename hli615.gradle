@@ -2,6 +2,7 @@ defaultTasks "jar"
 
 apply plugin: "java"
 apply plugin: "application"
+apply plugin:'base'
 
 sourceCompatibility = 1.8
 version = 1.0
