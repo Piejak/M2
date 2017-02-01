@@ -1,0 +1,22 @@
+defaultTasks "jar"
+apply plugin: "java"
+
+
+sourceCompatibility = 1.8
+version = 1.0
+jar {
+    archiveName = "AntLabMain.jar"
+    manifest {
+        attributes  'Implementation-Title' : 'Gradle Quickstart' ,
+                    'Implementation-Version' : version,
+                    'Class-Path' : './lib/resources.jar',
+                    'Main-Class' : "edu/gatech/oad/antlab/pkg1/AntLabMain"
+    }
+    destinationDir = file(".")
+    
+}
+
+dependencies {
+    compile files('lib/resources.jar')
+    runtime files('lib/resources.jar')
+}
